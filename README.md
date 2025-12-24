@@ -1,5 +1,3 @@
-# Houdini_Veg_Gen_Project_by_noob
-菜鸟的第一个houdini程序化工具 v0.1
 # 🌿 Houdini 自动植被分发工具 (v0.1)
 **Project by Mason**
 
