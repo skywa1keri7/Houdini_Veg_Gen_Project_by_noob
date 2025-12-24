@@ -1,0 +1,18 @@
+vector up = {0, 1, 0};
+vector n = normalize(@N);
+float dot_prod = dot(n, up);
+
+// 添加 chf() 函数创建滑块：控制坡度阈值和硬度
+float threshold = chf("Threshold");
+float hardness = chf("Hardness");
+
+// 用 smooth 函数让分布更自然
+f@growth_mask = smooth(threshold, threshold + hardness, dot_prod);
+
+@Cd = f@growth_mask; // 此时模型朝上的部分变白，侧面变黑
+
+// 引入一个全局缩放滑块，方便你随时放大观察
+float global_scale = chf("Global_Scale");
+
+// 逻辑：基础缩放(0.05) + (坡度遮罩 * 随机值) * 全局倍率
+@pscale = (0.05 + f@growth_mask * rand(@ptnum)) * global_scale;
