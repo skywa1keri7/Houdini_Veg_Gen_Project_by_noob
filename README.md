@@ -1,7 +1,7 @@
 # 🌿 Houdini 自动植被分发工具 (v0.1)
-**Project by Mason
+**Project by Mason**
 
-资产下载：请前往右侧的 Releases 页面获取最新版本的 .hdanc 文件**
+**资产下载：请前往右侧的 Releases 页面获取最新版本的 .hdanc 文件**
 
 ### 核心功能 (Key Features):
 - **数学驱动**：利用点积 (Dot Product) 算法过滤生长的坡度，防止植物长在悬崖上。
